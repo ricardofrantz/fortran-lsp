@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "fortran-lsp",
-  "description": "Fortran Language Server (fortls) plugin for Claude Code",
+  "description": "Fortran Language Server (fortls) marketplace for Claude Code",
   "owner": {
     "name": "Ricardo Frantz"
   },
