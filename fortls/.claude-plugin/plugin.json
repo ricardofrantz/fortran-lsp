@@ -1,0 +1,11 @@
+{
+  "name": "fortls",
+  "description": "Fortran language server",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ricardo Frantz"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/ricardofrantz/fortran-lsp",
+  "homepage": "https://github.com/ricardofrantz/fortran-lsp"
+}
