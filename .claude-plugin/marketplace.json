@@ -1,0 +1,40 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "fortran-lsp",
+  "description": "Fortran Language Server (fortls) plugin for Claude Code",
+  "owner": {
+    "name": "Ricardo Frantz"
+  },
+  "plugins": [
+    {
+      "name": "fortls-lsp",
+      "description": "Fortran language server for code intelligence and diagnostics",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ricardo Frantz"
+      },
+      "source": "./plugins/fortls-lsp",
+      "category": "development",
+      "strict": false,
+      "lspServers": {
+        "fortls": {
+          "command": "fortls",
+          "extensionToLanguage": {
+            ".f": "fortran",
+            ".f90": "fortran",
+            ".f95": "fortran",
+            ".f03": "fortran",
+            ".f08": "fortran",
+            ".F": "fortran",
+            ".F90": "fortran",
+            ".F95": "fortran",
+            ".F03": "fortran",
+            ".F08": "fortran",
+            ".for": "fortran",
+            ".FOR": "fortran"
+          }
+        }
+      }
+    }
+  ]
+}

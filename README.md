@@ -1,6 +1,20 @@
-# fortls — Fortran Language Server Plugin for Claude Code
+# fortran-lsp
 
-Provides Fortran code intelligence via [fortls](https://github.com/fortran-lang/fortls) for Claude Code.
+Fortran Language Server ([fortls](https://github.com/fortran-lang/fortls)) marketplace plugin for Claude Code.
+
+## Installation
+
+1. **Install fortls:**
+   ```bash
+   uv tool install fortls    # recommended
+   pip install fortls         # alternative
+   ```
+
+2. **Add marketplace and install plugin:**
+   ```
+   /plugins marketplace add https://github.com/ricardofrantz/fortran-lsp
+   /plugins install fortls-lsp@fortran-lsp
+   ```
 
 ## Features
 
@@ -8,51 +22,11 @@ Provides Fortran code intelligence via [fortls](https://github.com/fortran-lang/
 - Go to definition / Find references
 - Diagnostics (syntax errors, unused variables)
 - Autocomplete for keywords, intrinsics, user-defined symbols
-- Support for all Fortran variants: fixed-form (`.f`, `.for`), free-form (`.f90`–`.f08`), and preprocessed (`.F90`–`.F08`)
+- All Fortran variants: fixed-form (`.f`, `.for`), free-form (`.f90`–`.f08`), preprocessed (`.F90`–`.F08`)
 
-## Installation
+## Supported Extensions
 
-```bash
-claude /install-plugin https://github.com/ricardofrantz/fortran-lsp
-```
-
-fortls will be auto-installed on first session start (via `uv tool install` or `pip install`).
-
-### Manual fortls installation
-
-```bash
-uv tool install fortls    # recommended
-pip install fortls         # alternative
-```
-
-## Plugin Structure
-
-```
-fortls/
-├── .claude-plugin/
-│   └── plugin.json          # Plugin metadata
-├── hooks/
-│   ├── hooks.json           # SessionStart hook config
-│   └── check-fortls.sh      # Auto-install script
-└── .lsp.json                # LSP server configuration
-```
-
-## Supported File Extensions
-
-| Extension | Format |
-|-----------|--------|
-| `.f`, `.F` | Fixed-form |
-| `.for`, `.FOR` | Fixed-form (legacy) |
-| `.f90`, `.F90` | Free-form (Fortran 90) |
-| `.f95`, `.F95` | Free-form (Fortran 95) |
-| `.f03`, `.F03` | Free-form (Fortran 2003) |
-| `.f08`, `.F08` | Free-form (Fortran 2008) |
-
-Uppercase variants (`.F90`, etc.) are typically preprocessed with `cpp` before compilation.
-
-## Configuration
-
-fortls reads project-level configuration from `.fortlsrc`, `.fortls.json`, or `.fortls` in the project root. See [fortls documentation](https://fortls.fortran-lang.org/options.html) for available options.
+`.f` `.f90` `.f95` `.f03` `.f08` `.F` `.F90` `.F95` `.F03` `.F08` `.for` `.FOR`
 
 ## License
 
