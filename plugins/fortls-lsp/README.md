@@ -7,14 +7,19 @@ Fortran language server ([fortls](https://github.com/fortran-lang/fortls)) for C
 
 ## Installation
 
-Install fortls:
+Install fortls using any of these methods:
 
+### Via pipx (recommended)
+```bash
+pipx install fortls
+```
+
+### Via uv
 ```bash
 uv tool install fortls
 ```
 
-Or with pip:
-
+### Via pip
 ```bash
 pip install fortls
 ```
