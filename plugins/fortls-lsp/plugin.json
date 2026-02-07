@@ -1,0 +1,24 @@
+{
+  "name": "fortls-lsp",
+  "description": "Fortran language server (fortls) for code intelligence and diagnostics",
+  "version": "1.0.0",
+  "lspServers": {
+    "fortls": {
+      "command": "fortls",
+      "extensionToLanguage": {
+        ".f": "fortran",
+        ".f90": "fortran",
+        ".f95": "fortran",
+        ".f03": "fortran",
+        ".f08": "fortran",
+        ".F": "fortran",
+        ".F90": "fortran",
+        ".F95": "fortran",
+        ".F03": "fortran",
+        ".F08": "fortran",
+        ".for": "fortran",
+        ".FOR": "fortran"
+      }
+    }
+  }
+}
